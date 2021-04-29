@@ -40,6 +40,12 @@ var server = app.listen(process.env.PORT || 8080, function () {
     console.log("App now running on port", port);
 });
 
+var router = express.Router();
+
+    router.get('/', function(req, res, next) {  
+          res.status(200).send("Hi, It works!")  
+    }); 
+
 app.put("/register/", cors(corsOptions), function(req, res, next) {
     register.user(req.body)
         .then(result => res.send(result))
