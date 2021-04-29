@@ -21,15 +21,6 @@ initialize.start()
 
 var app = express();
 
-// respond with "hello world" when a GET request is made to the homepage
-//app.get('/', function (req, res) {
-  //res.send('hello world')
-//})
-//app.get('/*', function(req,res) {
-    //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
-    //res.sendFile(path.join(__dirname, '/front-end/src/app/auth/login/login.page.html'));
-//})
-
 app.use(bodyParser.json());
 
 //Ref: https://github.com/troygoode/node-cors-server/blob/master/server.js
@@ -48,6 +39,16 @@ var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
 });
+
+
+// respond with "hello world" when a GET request is made to the homepage
+//app.get('/', function (req, res) {
+  //res.send('hello world')
+//})
+app.get('/*', function(req,res) {
+    //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
+    res.sendFile(path.join(__dirname, '/front-end/src/app/auth/login/login.page.html'));
+})
 
 app.put("/register/", cors(corsOptions), function(req, res, next) {
     register.user(req.body)
