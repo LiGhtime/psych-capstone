@@ -22,9 +22,13 @@ initialize.start()
 var app = express();
 
 // respond with "hello world" when a GET request is made to the homepage
-app.get('/', function (req, res) {
-  res.send('hello world')
-})
+//app.get('/', function (req, res) {
+  //res.send('hello world')
+//})
+app.get('/*', function(req,res) {
+    //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
+    res.sendFile(path.join(__dirname, 'front-end/src/', 'index.html'));
+});
 
 app.use(bodyParser.json());
 
