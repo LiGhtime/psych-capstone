@@ -45,10 +45,10 @@ var server = app.listen(process.env.PORT || 8080, function () {
 //app.get('/', function (req, res) {
   //res.send('hello world')
 //})
-app.get('/*', function(req,res) {
+//app.get('/', function(req,res) {
     //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
-    res.sendFile(path.join(__dirname, '/front-end/src/app/auth/login/login.page.html'));
-})
+    //res.sendFile(path.join(__dirname, '/front-end/src/app/auth/login/login.page.html'));
+//})
 
 app.put("/register/", cors(corsOptions), function(req, res, next) {
     register.user(req.body)
