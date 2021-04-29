@@ -48,7 +48,7 @@ var server = app.listen(process.env.PORT || 8080, function () {
 // })
 app.get('/', function(req, res) {
 //     res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
-    res.sendFile(path.join(__dirname, '/auth/login/login.page.html'))
+    res.sendFile(path.join('psych-capstone/front-end/src/', __dirname, '/auth/login/login.page.html'))
 //     res.sendFile(path.join(__dirname, '../index.html'))
 //     var a = path.join(__dirname, '../index.html');
 //     res.send(`This is ${a}`)
