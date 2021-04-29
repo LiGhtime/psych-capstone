@@ -27,7 +27,7 @@ var app = express();
 //})
 app.get('/*', function(req,res) {
     //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
-    res.sendFile(path.join(__dirname, 'front-end/src/app/auth/login/login.page.html'));
+    res.sendFile(path.join(__dirname, '/front-end/src/app/auth/login/login.page.html'));
 })
 
 app.use(bodyParser.json());
