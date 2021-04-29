@@ -220,7 +220,7 @@ app.put("/getTrainingFaces/", cors(corsOptions), function(req, res, next){
                 try {
                     var images = [];
                     for (var i = 0; i < 8; i++) {
-                        var data = fs.readFileSync(`./faces/black/training/level-${req.body.level}/${i}.png`);
+                        var data = fs.readFileSync(`./faces/black/training/level-${req.body.level}/${i}.jpg`);
                         images.push(new Buffer(data, 'binary').toString('base64'));
                     }
                     res.status(200).send({images: images});
@@ -295,11 +295,11 @@ app.put("/getWhosNewFaces/", cors(corsOptions), function(req, res, next){
                     var afterFaces = 8 - req.body.level + (1 - Math.round(req.body.level/8));
                     var beforeFaces = 8 - afterFaces;
                     for (var i = 0; i < afterFaces; i++) {
-                        var data = fs.readFileSync(`./faces/black/training/level-${req.body.level + 1}/${i}.png`);
+                        var data = fs.readFileSync(`./faces/black/training/level-${req.body.level + 1}/${i}.jpg`);
                         images.push(new Buffer(data, 'binary').toString('base64'));
                     }
                     for (var i = 0; i < beforeFaces; i++) {
-                        var data = fs.readFileSync(`./faces/black/training/level-${req.body.level - 1}/${i}.png`);
+                        var data = fs.readFileSync(`./faces/black/training/level-${req.body.level - 1}/${i}.jpg`);
                         images.push(new Buffer(data, 'binary').toString('base64'));
                     }
                     res.status(200).send({images: images});
