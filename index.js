@@ -47,8 +47,8 @@ var server = app.listen(process.env.PORT || 8080, function () {
 //})
 app.get('/', function(req,res) {
     //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
-    //res.sendFile(path.join(__dirname, '/front-end/src/app/auth/login/login.page.html'))
-    res.send(__dirname)
+    res.sendFile(path.join(__dirname, '/auth/login/login.page.html'))
+    //res.send(__dirname)
 })
 
 app.put("/register/", cors(corsOptions), function(req, res, next) {
