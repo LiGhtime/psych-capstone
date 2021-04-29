@@ -42,7 +42,7 @@ var server = app.listen(process.env.PORT || 8080, function () {
 
 
 // respond with "hello world" when a GET request is made to the homepage
-app.get("/", function(req, res, next) {
+app.put("/", function(req, res) {
   res.send('hello world')
 })
 // app.get('/', function(req,res) {
