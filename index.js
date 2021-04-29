@@ -45,11 +45,12 @@ var server = app.listen(process.env.PORT || 8080, function () {
 // app.get("/", function(req, res) {
 //   res.send('hello world')
 // })
-// app.get('/', function(req,res) {
-//     //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
+app.get('/', function(req, res, next) {
+    //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
 //     res.sendFile(path.join(__dirname, '/auth/login/login.page.html'))
-//     //res.send(__dirname)
-// })
+    res.sendFile(path.join(__dirname, '../index.html'))
+    //res.send(__dirname)
+})
 // app.get("/", function(req, res, next) {
 //     if(req.headers.authorization != undefined){
 //         let auth = req.headers.authorization.split(' ')[1];
