@@ -27,7 +27,7 @@ var app = express();
 //})
 app.get('/*', function(req,res) {
     //res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
-    res.sendFile(path.join(__dirname, '/front-end/src/', 'index.html'));
+    res.sendFile(path.join(__dirname, 'front-end/src/app/auth/login/login.page.html'));
 })
 
 app.use(bodyParser.json());
@@ -57,7 +57,7 @@ app.put("/register/", cors(corsOptions), function(req, res, next) {
                 res.status(400).send(err);
             }
             else{
-                res.status(500).send("Internal server error");
+                res.status(500).send("Internal server error, register");
             }
         })
 })
@@ -75,7 +75,7 @@ app.post("/login/", cors(corsOptions), function(req, res, next) {
                 }
             }
             else{
-                res.status(500).send("Internal server error");
+                res.status(500).send("Internal server error, login");
             }
         })
 })
@@ -96,7 +96,7 @@ app.post("/tasks/", cors(corsOptions), function(req, res, next) {
                             res.status(400).send(err);
                         }
                         else{
-                            res.status(500).send("Internal server error");
+                            res.status(500).send("Internal server error, tasks");
                         }
                     })
             })
@@ -124,7 +124,7 @@ app.post("/userData/", cors(corsOptions), function(req, res, next) {
                             }
                         }
                         else{
-                            res.status(500).send("Internal server error");
+                            res.status(500).send("Internal server error, userData");
                         }
                     })
             })
@@ -157,7 +157,7 @@ app.put("/preassessment/", cors(corsOptions), function(req, res, next){
                             res.status(400).send(err);
                         }
                         else{
-                            res.status(500).send("Internal server error");
+                            res.status(500).send("Internal server error, preassessment");
                         }
                     })
             })
@@ -179,7 +179,7 @@ app.put("/postassessment/", cors(corsOptions), function(req, res, next){
                         res.status(400).send(err);
                     }
                     else{
-                        res.status(500).send("Internal server error");
+                        res.status(500).send("Internal server error, postassessment");
                     }
                 })
         })
@@ -202,7 +202,7 @@ app.put("/changepassword/", cors(corsOptions), function(req, res, next){
                         }
                         else{
                             console.log(err);
-                            res.status(500).send("Internal server error");
+                            res.status(500).send("Internal server error, changepassword");
                         }
                     })
             })
@@ -225,7 +225,7 @@ app.put("/getTrainingFaces/", cors(corsOptions), function(req, res, next){
                     }
                     res.status(200).send({images: images});
                 } catch (err) {
-                    res.status(500).send("Internal server error");
+                    res.status(500).send("Internal server error, getTrainingFaces");
                 }
             })
             .catch(err => res.status(401).send("Invalid token")) 
@@ -253,7 +253,7 @@ app.put("/getDailyAssessmentFaces/", cors(corsOptions), function(req, res, next)
                     }
                     res.status(200).send({images: images});
                 } catch (err) {
-                    res.status(500).send("Internal server error");
+                    res.status(500).send("Internal server error, getDailyAssessmentFaces");
                 }
             })
             .catch(err => res.status(401).send("Invalid token")) 
@@ -275,7 +275,7 @@ app.put("/getPrePostAssessmentFaces/", cors(corsOptions), function(req, res, nex
                     }
                     res.status(200).send({images: images});
                 } catch (err) {
-                    res.status(500).send("Internal server error");
+                    res.status(500).send("Internal server error, getPrePostAssessmentFaces");
                 }
             })
             .catch(err => res.status(401).send("Invalid token")) 
@@ -305,7 +305,7 @@ app.put("/getWhosNewFaces/", cors(corsOptions), function(req, res, next){
                     res.status(200).send({images: images});
                 } catch (err) {
                     console.log(err)
-                    res.status(500).send("Internal server error");
+                    res.status(500).send("Internal server error, getWhosNewFaces");
                 }
             })
             .catch(err => res.status(401).send("Invalid token")) 
