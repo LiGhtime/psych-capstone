@@ -1,3 +1,4 @@
+/node_modules
 
 auth.json
 
@@ -6,4 +7,3 @@ auth.json
 *.key
 
 *.key.pub
-**/.DS_Store
