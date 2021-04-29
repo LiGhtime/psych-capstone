@@ -14,6 +14,7 @@ var postassessment = require('./postassessment.js');
 var tokenHandler = require('./token.js');
 var password = require('./passwordChange.js');
 var fs = require("fs");
+const path = require('path');
 
 initialize.start()
     .then(res => console.log(res))
