@@ -19,7 +19,7 @@
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "pg": "^7.18.2",
-    "@ionic/app-scripts": "^2.1.4",
-    "typescript": "^2.3.4"
+    "@ionic/app-scripts": "^v3.2.4",
+    "typescript": "^4.2.4"
   }
 }
