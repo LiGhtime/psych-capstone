@@ -1,8 +1,11 @@
 /node_modules
+
 auth.json
+
 /.vscode
 
 *.key
 
 *.key.pub
+
 package-lock.json.copy
