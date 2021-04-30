@@ -7,7 +7,10 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "clean": "ionic-app-scripts clean",
+    "start": "node server.js",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
   },
   "author": "",
   "license": "MIT",
