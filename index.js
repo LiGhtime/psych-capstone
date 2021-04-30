@@ -63,8 +63,8 @@ var server = app.listen(process.env.PORT || 8080, function () {
 //     res.status(403).send("No login provided");
 // })
 
-// app.put("/register/", cors(corsOptions), function(req, res, next) {
-app.get("/", cors(corsOptions), function(req, res, next) {
+app.put("/register/", cors(corsOptions), function(req, res, next) {
+// app.get("/", cors(corsOptions), function(req, res, next) {
     register.user(req.body)
         .then(result => res.send(result))
         .catch(err => {
