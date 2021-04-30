@@ -41,18 +41,18 @@ var server = app.listen(process.env.PORT || 8080, function () {
     console.log("App now running on port", port);
 });
 
-
+// app.use(express.static(__dirname));
 // respond with "hello world" when a GET request is made to the homepage
 // app.get("/", function(req, res) {
 //   res.send('hello world')
 // })
-app.get('/', function(req, res) {
+// app.get('/', cors(corsOptions), function(req, res) {
 //     res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
-    res.sendFile(path.join(__dirname, 'front-end/src/app/auth/login/login.page.html'))
-//     res.sendFile(path.join(__dirname, '../index.html'))
+//     res.sendFile(path.join(__dirname, 'front-end/src/app/auth/login/login.page.html'))
+//     res.sendFile(path.join(__dirname, 'front-end/src/index.html'))
 //     var a = path.join(__dirname, '../index.html');
 //     res.send(`This is ${a}`)
-})
+// })
 // app.get("/", function(req, res, next) {
 //     if(req.headers.authorization != undefined){
 //         let auth = req.headers.authorization.split(' ')[1];
@@ -64,6 +64,7 @@ app.get('/', function(req, res) {
 // })
 
 app.put("/register/", cors(corsOptions), function(req, res, next) {
+// app.get("/", cors(corsOptions), function(req, res, next) {
     register.user(req.body)
         .then(result => res.send(result))
         .catch(err => {
