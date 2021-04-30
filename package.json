@@ -2,9 +2,6 @@
   "name": "crd-back-end",
   "version": "1.0.0",
   "description": "API backend for the CRD app",
-  "engines": {
-    "node": "8.3.0"
-  },
   "main": "index.js",
   "scripts": {
     "ionic:build:prod": "ionic-app-scripts build -- --prod",
