@@ -21,7 +21,7 @@ initialize.start()
     .catch(err => console.log(err))
 
 var app = express();
-app.use(express.static('www'));
+app.use(express.static(__dirname + '/www'))
 app.use(bodyParser.json());
 
 //Ref: https://github.com/troygoode/node-cors-server/blob/master/server.js
