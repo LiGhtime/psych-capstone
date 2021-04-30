@@ -2,6 +2,9 @@
   "name": "crd-back-end",
   "version": "1.0.0",
   "description": "API backend for the CRD app",
+  "engines": {
+    "node": "14.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node server.js"
