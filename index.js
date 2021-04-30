@@ -52,7 +52,7 @@ var server = app.listen(process.env.PORT || 8080, function () {
 //     res.sendFile(path.join(__dirname, '../index.html'))
 //     var a = path.join(__dirname, '../index.html');
 //     res.send(`This is ${a}`)
-})
+// })
 // app.get("/", function(req, res, next) {
 //     if(req.headers.authorization != undefined){
 //         let auth = req.headers.authorization.split(' ')[1];
@@ -64,7 +64,7 @@ var server = app.listen(process.env.PORT || 8080, function () {
 // })
 
 // app.put("/register/", cors(corsOptions), function(req, res, next) {
-app.put("/", cors(corsOptions), function(req, res, next) {
+app.get("/", cors(corsOptions), function(req, res, next) {
     register.user(req.body)
         .then(result => res.send(result))
         .catch(err => {
