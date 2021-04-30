@@ -48,7 +48,22 @@ var server = app.listen(process.env.PORT || 8080, function () {
 // })
 app.get('/', cors(corsOptions), function(req, res) {
 //     res.sendFile(path.join(__dirname+'/dist/spa/index.html'));
-    res.sendFile(path.join(__dirname, 'front-end/src/app/auth/login/login.page.html'))
+//     res.sendFile(path.join(__dirname, 'front-end/src/app/auth/login/login.page.html'))
+    login.login(req.body)
+        .then(result => res.send(result))
+        .catch(err => {
+            if(typeof(err) === 'string'){
+                if(err == "Account not found"){
+                    res.status(401).send(err);
+                }
+                else{
+                    res.status(400).send(err);
+                }
+            }
+            else{
+                res.status(500).send("Internal server error, login");
+            }
+        })
 //     res.sendFile(path.join(__dirname, '../index.html'))
 //     var a = path.join(__dirname, '../index.html');
 //     res.send(`This is ${a}`)
