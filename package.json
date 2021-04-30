@@ -21,7 +21,7 @@
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "pg": "^7.18.2",
-    "@ionic/app-scripts": "^1.1.4",
+    "@ionic/app-scripts": "1.1.4",
     "typescript": "4.2.4"
   }
 }
