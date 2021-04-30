@@ -5,3 +5,4 @@ auth.json
 *.key
 
 *.key.pub
+package-lock.json.copy
