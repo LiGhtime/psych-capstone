@@ -7,9 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "ionic:build:prod": "ionic-app-scripts build -- --prod",
-    "start": "node server.js",
-    "heroku-postbuild": "npm run ionic:build:prod"
+    "start": "node server.js"
   },
   "author": "",
   "license": "MIT",
