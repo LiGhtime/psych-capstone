@@ -1,1 +1,1 @@
-web: npm ionic:serve
+web: ionic serve
